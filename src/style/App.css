@@ -5,15 +5,16 @@
 .App-header {
   background-color: #2c2c2c;
   color: white;
-  padding: 2rem;
 }
 
 .App-logo {
   width: 3rem;
   color: white;
-  margin-right: 2rem;
+  margin: 0 2rem 0 2rem;
 }
 
 .App-title {
-  vertical-align: center;
+  font-size: 2rem;
 }
+
+

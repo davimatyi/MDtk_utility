@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "@types/serialport": "^8.0.1",
     "electron": "^13.1.1",
     "foreman": "^3.0.1"
   }

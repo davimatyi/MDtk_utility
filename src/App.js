@@ -1,30 +1,44 @@
 import logo from './assets/logo.svg';
 import './style/theme.scss'
 import './style/App.css';
-import {Button} from 'react-bootstrap';
-import bootstrap from 'bootstrap';
+import { Button, Dropdown, Nav, Navbar } from 'react-bootstrap';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="App-title">MDtk Companion</h1>
-      </header>
-      <div className="dropdown">
-        <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown button
-        </button>
-        <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a className="dropdown-item" >Action</a>
-          <a className="dropdown-item" >Another action</a>
-          <a className="dropdown-item" >Something else here</a>
-        </div>
-      </div>
-      <button className="btn btn-danger">Large OOF</button>
-    </div>
-  );
+const App = () => (
+  <div className="App">
+    <header className="App-header" fixed="top">
+      <MenuBar />
+    </header>
+    <main>
+      <Dropdown>
+        <Dropdown.Toggle variant="primary" id="dropdown-basic">
+          Serial Port
+        </Dropdown.Toggle>
+        <Dropdown.Menu id="comportDropdown" onClick="updatePortsList()">
+          
+        </Dropdown.Menu>
+      </Dropdown>
+    </main>
+  </div>
+);
 
-}
+
+const MenuBar = () => (
+  <Navbar bg="dark" variant="dark">
+    <Navbar.Brand>
+      <img src={logo} className="App-logo" alt="logo" />
+      <span className="h2">MDtk</span>
+    </Navbar.Brand>
+    <Navbar.Toggle id="basic-navbar-nav" />
+    <Nav className="mr-auto">
+      <Nav.Link href="#">Keybindings</Nav.Link>
+      <Nav.Link href="#">Macro</Nav.Link>
+      <Nav.Link href="#">Settings</Nav.Link>
+    </Nav>
+  </Navbar>
+);
+
+
+
+
 
 export default App;
