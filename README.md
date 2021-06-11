@@ -2,13 +2,15 @@
 
 This is a companion app / tool made for the MDtk programmable numeric keyboard. It is written in JS using React and Electron.
 
+The firmware for the board is being developed in [this repository](https://github.com/davimatyi/MDtk)
+
 ## Functionality
 
 The app is in early development. Planned functions include:
-    -   updating the firmware
-    -   loading macros
-    -   rebinding keys
-    -   changing additional settings
+ -   updating the firmware
+ -   loading macros
+ -   rebinding keys
+ -   changing additional settings
 
 ## Running and building the app
 
